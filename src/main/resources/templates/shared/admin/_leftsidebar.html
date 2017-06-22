@@ -9,12 +9,12 @@
       <div class="media leftpanel-profile">
         <div class="media-left">
           <a href="#">
-            <img src="../images/photos/loggeduser.png" alt="" class="media-object img-circle">
+            <img src="/resources/admin/assets/images/photos/loggeduser.png" alt="" class="media-object img-circle">
           </a>
         </div>
         <div class="media-body">
           <h4 class="media-heading">Elen Adarna <a data-toggle="collapse" data-target="#loguserinfo" class="pull-right"><i class="fa fa-angle-down"></i></a></h4>
-          <span>Software Engineer</span>
+          <span​​​​ th:text="#{software-engineer}"></span>
         </div>
       </div><!-- leftpanel-profile -->
 
@@ -24,10 +24,10 @@
           4975 Cambridge Road
           Miami Gardens, FL 33056
         </address>
-        <h5 class="sidebar-title">Contact</h5>
+        <h5 class="sidebar-title" th:text="#{contact}" ></h5>
         <ul class="list-group">
           <li class="list-group-item">
-            <label class="pull-left">Email</label>
+            <label class="pull-left" th:text="#{email}"></label>
             <span class="pull-right">me@themepixels.com</span>
           </li>
           <li class="list-group-item">
@@ -64,26 +64,26 @@
         <div class="tab-pane active" id="mainmenu">
           <h5 class="sidebar-title">Favorites</h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
-            <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a th:href="@{/home}"><i class="fa fa-home"></i> <span th:text="#{dashboard}">Dashboard</span></a></li>
             
           </ul>
 
-          <h5 class="sidebar-title">Main Menu</h5>
+          <h5 class="sidebar-title" th:text="#{main-menu}"></h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="nav-parent">
-              <a href=""><i class="fa fa-check-square"></i> <span>ROLE</span></a>
+              <a href=""><i class="fa fa-check-square"></i> <span th:text="#{role}"></span></a>
               <ul class="children">
-                <li><a th:href="@{role/role-c}">Role C</a></li>
-                <li><a th:href="@{role/role-list}">Role List</a></li>
+                <li><a th:href="@{/role/role-c}" th:text="#{user-cu}"></a></li>
+                <li><a th:href="@{/role/role-list}" th:text="#{role-list}"></a></li>
               </ul>
            
            <!-- ********************************************** -->
            <!-- ********************************************** -->
            
-            <li class="nav-parent"><a href=""><i class="fa fa-th-list"></i> <span>USERS</span></a>
+            <li class="nav-parent"><a href=""><i class="fa fa-th-list"></i> <span th:text="#{user}"></span></a>
               <ul class="children">
-                <li><a th:href="@{/user/user-cu}">User CU</a></li>
-                <li><a th:href="@{/user/user-list}">User List</a></li>
+                <li><a th:href="@{/user/user-cu}" th:text="#{user-cu}"></a></li>
+                <li><a th:href="@{/user/user-list}" th:text="#{user-list}"></a></li>
               </ul>
             </li>
             
@@ -127,7 +127,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                    <img class="media-object img-circle" src="../images/photos/user1.png" alt="">
+                    <img class="media-object img-circle" src="/resources/admin/assets//images/photos/user1.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Christina R. Hill</h4>
@@ -138,7 +138,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user2.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user2.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Floyd M. Romero</h4>
@@ -149,7 +149,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user3.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user3.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Jennie S. Gray</h4>
@@ -160,7 +160,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user4.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user4.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Alia J. Locher</h4>
@@ -171,7 +171,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user5.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user5.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Nicholas T. Hinkle</h4>
@@ -182,7 +182,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user6.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user6.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Jamie W. Bradford</h4>
@@ -193,7 +193,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user7.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user7.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Pamela J. Stump</h4>
@@ -204,7 +204,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user8.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user8.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Refugio C. Burgess</h4>
@@ -215,7 +215,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user9.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user9.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Ashley T. Brewington</h4>
@@ -226,7 +226,7 @@
             <li class="media">
               <a href="#">
                 <div class="media-left">
-                  <img class="media-object img-circle" src="../images/photos/user10.png" alt="">
+                  <img class="media-object img-circle" src="/resources/admin/assets/images/photos/user10.png" alt="">
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Roberta F. Horn</h4>

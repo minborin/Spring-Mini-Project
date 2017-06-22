@@ -24,7 +24,7 @@ public class MainController {
 	public String roleList(){
 		return "/admin/role-list";
 	}
-	@RequestMapping("/user")
+	@RequestMapping("/home")
 	public String dashboard(){
 		return "/admin/dashboard";
 	}
