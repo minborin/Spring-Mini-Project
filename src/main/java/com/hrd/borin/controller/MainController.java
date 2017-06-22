@@ -28,4 +28,8 @@ public class MainController {
 	public String dashboard(){
 		return "/admin/dashboard";
 	}
+	@RequestMapping("/signin")
+	public String signIN(){
+		return "/admin/signin";
+	}
 }
