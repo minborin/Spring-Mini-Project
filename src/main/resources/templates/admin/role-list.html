@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorator="/admin/admin-layout">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>User Input Form</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+	<div class="wrapper">
+		<div class="container">
+				 <div class="col-lg-6">
+                        <div class="card-box">
+
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+
+                            <h4 class="header-title m-t-0 m-b-30">Fill your information</h4>
+
+                            <form th:action="@{/user/userroledata}" method="POST" th:object="${user}" enctype="multipart/form-data" role="form" class="form-horizontal">
+                              
+                        
+                              
+                                
+                                  <div class="form-group">
+                                    <label class="col-sm-3 control-label" th:text="#{id}">Id</label>
+                                    <div class="col-sm-4">
+                                   		 <td><input type="text" th:field="*{id}" class="form-control" placeholder="Enter ID"/></td>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" th:text="#{name}">Name</label>
+                                    <div class="col-sm-4">
+                                   		 <td><input type="text" th:field="*{name}" class="form-control" placeholder="Enter Your Full Name"/></td>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" th:text="#{gender}">Gender</label>
+                                    <div class="col-sm-4">
+                                        <td><input type="text" th:field="*{gender}" class="form-control" placeholder="Enter Your Gender"/></td>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" th:text="#{age}">Age</label>
+                                    <div class="col-sm-4">
+                                        <td><input type="text" th:field="*{age}" class="form-control" placeholder="Enter Your Age"/></td>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" th:text="#{salary}">Salary</label>
+                                    <div class="col-sm-4">
+                                        <td><input type="text" th:field="*{salary}" class="form-control" placeholder="Enter Your Salary"/></td>
+                                    </div>
+                                </div>
+
+                                
+                                <button type="submit" class="btn btn-purple waves-effect waves-light" th:text="#{submit}">Submit</button>
+                               
+                            </form>
+
+                        </div>
+                    </div><!-- end col -->
+                    
+		
+		</div>
+	</div>
+	
+	
+</div> 
+</body>
+</html>
