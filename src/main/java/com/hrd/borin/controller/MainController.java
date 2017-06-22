@@ -7,24 +7,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-	@RequestMapping("/user/user-cu")
+	@RequestMapping("/user-cu")
 	public String userCU(){
 		return "/admin/user-cu";
 	}
 	
-	@RequestMapping("/user/user-list")
+	@RequestMapping("/user-list")
 	public String userList(){
 		return "/admin/user-list";
 	}
-	@RequestMapping("/role/role-c")
+	@RequestMapping("/role-c")
 	public String roleC(){
 		return "/admin/role-c";
 	}
-	@RequestMapping("/role/role-list")
+	@RequestMapping("/role-list")
 	public String roleList(){
 		return "/admin/role-list";
 	}
-	@RequestMapping("/home")
+	@RequestMapping({"/home","/"})
 	public String dashboard(){
 		return "/admin/dashboard";
 	}
