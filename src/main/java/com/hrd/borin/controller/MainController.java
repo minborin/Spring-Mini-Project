@@ -58,7 +58,7 @@ public class MainController {
 	public String edit(ModelMap model, @PathVariable("user_hash") String user_hash){
 		
 		Users users=userService.findone(user_hash);
-		System.out.println("user_hash"+users.getUser_hash());
+	//	System.out.println("user_hash"+users.getUser_hash());
 		model.addAttribute("user", users);
 		model.addAttribute("addStatus", false);
 		return "/admin/user-cu";
@@ -79,7 +79,10 @@ public class MainController {
 		return "redirect:/user";
 	}
 	
-	
+	@RequestMapping("/data")
+	public String data(){
+		return "admin/data";
+	}
 	
 	@RequestMapping("/user-list")
 	public String userList(){
