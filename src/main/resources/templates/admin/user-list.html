@@ -29,33 +29,40 @@
             <table id="dataTable1" class="table table-bordered table-striped-col">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
+                  <th>Gender</th>
                   <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Action</th>
                 </tr>
               </thead>
  			<tbody>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
-                  <td>$320,800</td>
+                <tr th:each="U:${user}">
+                  <td th:text="${U.id}"></td>
+                  <td th:text="${U.name}"></td>
+                  <td th:text="${U.gender}"></td>
+                  <td th:text="${U.age}"></td>
+                  <td th:text="${U.email}"></td>
+                  <td th:text="${U.phone}"></td>
+                  <td>
+                  
+                  	<a th:href="@{/edit/{user_hash}(user_hash=${U.user_hash})}">Edit</a>
+                  		<a th:href="@{/remove(user_hash=${U.user_hash})}">Remove</a>
+                  </td>
                 </tr>
              
               </tbody>
               <tfoot>
-                <tr>
+               <tr>
+                  <th>ID</th>
                   <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
+                  <th>Gender</th>
                   <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Action</th>
                 </tr>
               </tfoot>
 

@@ -1,6 +1,7 @@
 package com.hrd.borin.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,35 @@ public class UserServiceImp  implements UserService{
 		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
+
+	@Override
+	public boolean save(Users user) {
+		String users=UUID.randomUUID().toString();
+		user.setUser_hash(users);
+		return userRepository.save(user);
+		
+	}
+
+	@Override
+	public boolean update(Users user) {
+		
+		return userRepository.update(user);
+	}
+
+
+
+	@Override
+	public Users findone(String user_hash) {
+		
+		return userRepository.findOne(user_hash);
+	}
+
+	@Override
+	public boolean delete(String user_hash) {
+		
+		return userRepository.delete(user_hash);
+	}
+
+	
 	
 }

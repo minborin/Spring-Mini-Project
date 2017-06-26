@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>B012_MomReksmey_SpringMiniProject</name>
+	<name>B008_MinBorin_SpringMiniProject</name>
 	<description>Demo Spring Mini Project</description>
 
 	<parent>
