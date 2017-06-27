@@ -1,0 +1,21 @@
+- Table: users
+
+-- DROP TABLE users;
+
+CREATE TABLE users
+(
+  id serial NOT NULL,
+  name character varying(50),
+  gender character varying(7),
+  age character varying(10),
+  email character varying(70),
+  phone character varying(15),
+  user_hash character varying(80),
+  status character varying(5) DEFAULT '1'::character varying,
+  CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE users
+  OWNER TO postgres;
