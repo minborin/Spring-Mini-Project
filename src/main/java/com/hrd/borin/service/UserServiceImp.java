@@ -52,6 +52,24 @@ public class UserServiceImp  implements UserService{
 		return userRepository.delete(user_hash);
 	}
 
+	@Override
+	public String getMale() {
+		// TODO Auto-generated method stub
+		return userRepository.getMale();
+	}
+
+	@Override
+	public String getFemale() {
+		// TODO Auto-generated method stub
+		return userRepository.getFemale();
+	}
+
+	@Override
+	public String allUsers() {
+		// TODO Auto-generated method stub
+		return userRepository.allUser();
+	}
+
 	
 	
 }

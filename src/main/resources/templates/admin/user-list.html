@@ -35,6 +35,7 @@
                   <th>Age</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>User_Hash</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -46,10 +47,11 @@
                   <td th:text="${U.age}"></td>
                   <td th:text="${U.email}"></td>
                   <td th:text="${U.phone}"></td>
+                  <td th:text="${U.user_hash}"></td>
                   <td>
                   
                   	<a th:href="@{/edit/{user_hash}(user_hash=${U.user_hash})}">Edit</a>
-                  		<a th:href="@{/remove(user_hash=${U.user_hash})}">Remove</a>
+                    <a th:href="@{/remove(user_hash=${U.user_hash})}">Remove</a>
                   </td>
                 </tr>
              
@@ -62,6 +64,7 @@
                   <th>Age</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>User_Hash</th>
                   <th>Action</th>
                 </tr>
               </tfoot>

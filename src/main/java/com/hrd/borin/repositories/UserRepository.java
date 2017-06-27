@@ -31,7 +31,7 @@ public interface UserRepository {
 	@Select("SELECT id,name,gender ,age,email,phone,user_hash FROM users WHERE status='1'")
 	public List<Users> findAll();
 	
-	@Insert("INSERT INTO users VALUES(#{user.id}, #{user.name}, #{user.ge nder} ,#{user.age}, #{user.email}, #{user.phone}, #{user.user_hash})")
+	@Insert("INSERT INTO users VALUES(#{user.id}, #{user.name}, #{user.gender} ,#{user.age}, #{user.email}, #{user.phone}, #{user.user_hash})")
 	//@Insert("INSERT INTO users VALUES(15, 'name', 'F' ,56, 'ff', 999, 'dfskljdflshghgs')")
 	public boolean save(@Param("user")Users user);
 	
@@ -46,4 +46,33 @@ public interface UserRepository {
 	
 	@Delete("UPDATE users SET status='0' WHERE user_hash =#{user_hash}")
 	public boolean delete( String user_hash);
+	
+	@Select("SELECT COUNT(*)as a FROM users where status='1' ")
+	public String allUser();
+	
+	@Select("select count(gender)  from users where status='1'  and gender ='m' group by gender")
+	public String getMale();
+
+	@Select("select count(gender)  from users where status='1'  and gender ='f' group by gender")
+	public String getFemale();
+	
 }
+
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

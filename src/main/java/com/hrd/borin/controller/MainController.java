@@ -79,14 +79,22 @@ public class MainController {
 		return "redirect:/user";
 	}
 	
-	@RequestMapping("/data")
-	public String data(){
-		return "admin/data";
+	
+	
+	@RequestMapping("/info")
+	public String data(ModelMap mm){
+		mm.addAttribute("allusers",userService.allUsers());
+		mm.addAttribute("male",userService.getMale());
+		mm.addAttribute("female",userService.getFemale());
+		System.out.println(userService.getFemale());
+		return "admin/info";
 	}
+	
+	
 	
 	@RequestMapping("/user-list")
 	public String userList(){
-		return "/admin/user-list";
+		return "redirect:user";
 	}
 	@RequestMapping("/role/role-c")
 	public String roleC(){

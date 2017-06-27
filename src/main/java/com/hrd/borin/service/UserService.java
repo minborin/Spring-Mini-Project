@@ -13,4 +13,8 @@ public interface UserService {
 	public boolean update(Users user);
 	public boolean delete(String user_hash);
 	public Users findone(String user_hash);
+	public String getMale();
+	public String getFemale();
+	public String allUsers();
+	
 }

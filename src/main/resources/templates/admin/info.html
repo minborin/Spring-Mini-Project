@@ -20,7 +20,8 @@
               <h3 class="panel-title">User</h3>
             </div>
             <div class="panel-body" style="height:200px;">
-            				<h1>3</h1>
+            <!-- User  -->
+            				<h1 th:text="${allusers}"></h1>
             </div>
           </div><!-- panel -->
         </div><!-- col-sm-6 -->
@@ -31,8 +32,8 @@
               <h3 class="panel-title">Male</h3>
             </div>
             <div class="panel-body" style="height:200px;">
-              
-              <h1>3</h1>
+              <!-- Male -->
+              <h1 th:text="${male}"></h1>
             
             </div>
           </div><!-- panel -->
@@ -44,7 +45,9 @@
               <h3 class="panel-title">Female</h3>
             </div>
             <div class="panel-body" style="height:200px;">
-               	<h1>3</h1>
+               	<!-- Female -->
+              <h1 th:if="${female}==null" >0</h1>
+              <h1 th:if="${female} !=null" th:text=${female}></h1>
             </div>
           </div><!-- panel -->
         </div><!-- col-sm-6 -->
